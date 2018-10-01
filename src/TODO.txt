@@ -11,7 +11,7 @@
    add a Snatch3rRobot class with methods:
      --
 
-4. Individually, do one of the following:
+4. Individually, do one of the following :
   -- In rosebotics.py:
        -- Methods to make the robot go forwards and backwards
             a given number of seconds.
