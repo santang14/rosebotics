@@ -39,13 +39,13 @@ def run_test_go_stop():
     print(robot.right_wheel.get_degrees_spun())
     print(robot.left_wheel.get_degrees_spun())
 
+
 def run_test_turn_for_n_seconds(self, 20, ):
     robot = rb.StopAction()
 
 
-
 def run_test_spin_for_n_seconds():
-        robot = rb.Snatch3rRobot
+    robot = rb.Snatch3rRobot
 
 
 main()
