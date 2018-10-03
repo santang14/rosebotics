@@ -32,6 +32,18 @@ class Snatch3rRobot(object):
         self.left_wheel.stop_spinning(stop_action)
         self.right_wheel.stop_spinning(stop_action)
 
+    def turn_for_n_seconds(self, n, wheel):
+
+    def forward_for_n_seconds(self, n, speed):
+        time1 = time.time()
+        self.left_wheel.start_spinning(speed)
+        self.right_wheel.start_spinning(speed)
+        while True:
+            time2 = time.time()
+            x = time2 - time1
+            if x >= n:
+                break
+        self.stop()
     def turn_for_n_seconds(self, n, speed):
 
     def spin_for_n_seconds(self, n, speed):
