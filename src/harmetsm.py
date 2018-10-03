@@ -29,7 +29,6 @@ def run_test_go_stop():
     print(robot.left_wheel.get_degrees_spun())
     robot.left_wheel.reset_degrees_spun(0)
 
-
     time.sleep(2)
 
     robot.go(100, 100)
@@ -38,6 +37,10 @@ def run_test_go_stop():
 
     print(robot.right_wheel.get_degrees_spun())
     print(robot.left_wheel.get_degrees_spun())
+
+def run_test_turn_for_n_seconds(self, 20, ):
+    robot = rb.StopAction()
+
 
 
 main()
