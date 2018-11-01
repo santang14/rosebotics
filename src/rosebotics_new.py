@@ -289,7 +289,6 @@ class ColorSensor(low_level_rb.ColorSensor):
     def __init__(self, port=ev3.INPUT_3):
         super().__init__(port)
 
-
     def get_color(self):
         """
         Returns its best guess as to the color of the object upon which it is
@@ -454,6 +453,7 @@ class InfraredAsProximitySensor(low_level_rb.InfraredSensor):
     Primary authors:  The ev3dev authors, David Mutchler, Dave Fisher,
        their colleagues, the entire team, and PUT_YOUR_NAME_HERE.
     """
+
     # TODO: In the above line, put the name of the primary author of this class.
 
     def __init__(self, ir_sensor_port):
@@ -544,6 +544,7 @@ class InfraredAsBeaconButtonSensor(object):
     Primary authors:  The ev3dev authors, David Mutchler, Dave Fisher,
     their colleagues, the entire team, and PUT_YOUR_NAME_HERE.
     """
+
     # TODO: In the above line, put the name of the primary author of this class.
 
     def __init__(self, ir_sensor, channel=1):
@@ -601,6 +602,7 @@ class BrickButtonSensor(object):
     Primary authors:  The ev3dev authors, David Mutchler, Dave Fisher,
     their colleagues, the entire team, and PUT_YOUR_NAME_HERE.
     """
+
     # TODO: In the above line, put the name of the primary author of this class.
 
     def __init__(self):
@@ -652,6 +654,7 @@ class ArmAndClaw(object):
     Primary authors:  The ev3dev authors, David Mutchler, Dave Fisher,
     their colleagues, the entire team, and PUT_YOUR_NAME_HERE.
     """
+
     # TODO: In the above line, put the name of the primary author of this class.
 
     def __init__(self, touch_sensor, port=ev3.OUTPUT_A):
