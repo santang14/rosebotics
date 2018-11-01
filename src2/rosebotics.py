@@ -9,7 +9,10 @@
 
 from ev3dev import ev3
 from enum import Enum
+<<<<<<< HEAD
+=======
 import low_level_rosebotics as low_level_rb
+>>>>>>> aeca62ad3e504fadd0c49a8efdaddc9724011e05
 import time
 
 
@@ -19,6 +22,49 @@ class StopAction(Enum):
     HOLD = 'hold'
 
 
+<<<<<<< HEAD
+class Snatch3rRobot(object):
+    def __init__(self,
+                 left_wheel_port=ev3.OUTPUT_B,
+                 right_wheel_port=ev3.OUTPUT_C):
+        self.left_wheel = Wheel(left_wheel_port)
+        self.right_wheel = Wheel(right_wheel_port)
+
+    def go(self,
+           left_duty_cycle_percent,
+           right_duty_cycle_percent):
+        self.left_wheel.start_spinning(left_duty_cycle_percent)
+        self.right_wheel.start_spinning(right_duty_cycle_percent)
+
+    def stop(self, stop_action=StopAction.BRAKE.value):
+        self.left_wheel.stop_spinning(stop_action)
+        self.right_wheel.stop_spinning(stop_action)
+
+    def forward_for_n_seconds(self, n, speed):
+        time1 = time.time()
+        self.left_wheel.start_spinning(speed)
+        self.right_wheel.start_spinning(speed)
+        while True:
+            time2 = time.time()
+            x = time2 - time1
+            if x >= n:
+                break
+        self.stop()
+
+    def spin_for_n_seconds(self, n, speed):
+        initial = time.time()
+        self.left_wheel.start_spinning(speed)
+        self.right_wheel.start_spinning(-speed)
+        while True:
+            if time.time() - initial >= n:
+                break
+        self.stop()
+
+
+class Wheel(object):
+    def __init__(self, port, default_duty_cycle_percent=100,
+                 default_stop_action=StopAction.BRAKE.value):
+=======
 class Color(Enum):
     NO_COLOR = 0
     BLACK = 1
@@ -80,6 +126,7 @@ class DriveSystem(object):
                          left_wheel_duty_cycle_percent=100,
                          right_wheel_duty_cycle_percent=100,
                          stop_action=StopAction.BRAKE):
+>>>>>>> aeca62ad3e504fadd0c49a8efdaddc9724011e05
         """
         Move for the given number of seconds at the given wheel speeds.
         Speeds are -100 to 100, where negative means moving backwards.
